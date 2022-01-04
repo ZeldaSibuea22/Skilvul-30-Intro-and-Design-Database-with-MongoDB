@@ -1,136 +1,78 @@
 # Skilvul-30-Intro-and-Design-Database-with-MongoDB
 
-## Soal 1
+## Soal nomor 1
+### Profile Skiljek
 
-Schema Database Skiljek dengan data:
-
-- Full Name
-- Email
-- Phone Number
-
-One-to-One Relationships
-
-```json
+```js
 {
-    "_id": ObjectId("612d1e835ebee16872a109a4"),
-    "full_name": {
-        "first_name": "Zelda",
-        "last_name": "Sibuea"
-    },
-    "email": "zelda@mail.com",
-    "phone": "08982823170"
+"_id": "ObjectId('ABC')",
+"full_name": "Zelda Elma Sibuea",
+"email": "zelda.sibuea43@gmail.com",
+"phone_number": 0858********
 }
 ```
 
-## Soal 2
+## Soal nomor 2 Profile Skilshop
+<h2>Relasi one to many</h2>
 
-Schema Database SkilShop dengan data:
-
-- Full Name
-- Phone Number
-- Adress (Max 2)
-
-One-to-Few/Many Relationships
-
-```json
+```js
 {
-    "_id": ObjectId("612d1e835ebee16872a109a4"),
-    "full_name": {
-        "first_name": "Zelda",
-        "last_name": "Sibuea"
-    },
-    "phone": "08982823170",
-    "addresses": [
-        {
-            "address": "jln.Kos Abadi Jaya",
-            "type": "Rumah Utama"
-        },
-        {
-            "address": "jln.Jaya Sementara",
-            "type": "Rumah Dinas"
-        }
+    "_id": "ObjectId('CBA')",
+    "full_name": "Zelda Elma Sibuea",
+    "phone_mumber": 0858********
+    "address": [
+        "ObjectId('XYZ')",
+        "ObjectId('LMN')",
     ]
 }
 ```
 
-## Soal 3
+## Soal nomor 3
+<h2>Relasi one to one</h2>
 
-Schema Database SkilShop dengan data:
-
-- Product Name
-- Brand Name
-- Variants(Many)
-
-One-To-Many Relationships
-
-```json
+```js
 {
-    "_id": ObjectId("612d1e835ebee16872a109a4"),
-    "product_name": "Kaos Polos",
-    "brand": "SkilShirt",
-    "variants": [
-        {
-            "variant_name": "Kaos Polos Hitam",
-            "color": "Hitam",
-            "quantity": "12",
-            "price": "Rp. 99000"
-        },
-        {
-            "variant_name": "Kaos Polos Navy",
-            "color": "Navy",
-            "quantity": "10",
-            "price": "Rp. 99000"
-        }
-    ]
+    "_id": "ObjectId('ABA')",
+    "product_name": "Laptop",
+    "brand_name": "SkilShirt",
+    "variant": [{
+        "_id": "ObjectId('BAB')",
+        "variant_name_1": "Laptop Asus",
+        "color": "Hitam",
+        "quantity": 12,
+        "price": "Rp 140.000",
+    },{
+         "_id": "ObjectId('CAC')",
+        "variant_name_2": "Laptop Acer",
+        "color": "Navy",
+        "quantity": 10,
+        "price": "Rp 150.000",
+    }]
 }
 ```
 
-## Soal 4
+## Soal nomor 4
+<h2>Relasi one to many</h2>
 
-Schema Database SkilFlix dengan data:
-
-Cinema:
-
-- Cinema Name
-- Films (film collection)
-- Location
-  Film:
-- Film Name
-
-Many-To-Many Relationships
-
-Film Schema
-
-```json
-{
-    "_id": ObjectId("AAAA1"),
-    "film_name": "Venom 2"
-},
-{
-    "_id": ObjectId("AAAA2"),
-    "film_name": "Spiderman No Way Home"
-}
-```
-
-Cinema Schema
-
-```json
-{
-    "_id": ObjectId("CCCC1"),
-    "cinema_name": "CFG",
-    "films": [
-        ObjectId("Spiderman"),
-        ObjectId("Avenger")
+```js
+[
+    {
+    "_id": "ObjectId('SKV')",
+    "cinema_name": "Monsta",
+    "film": [
+        "ObjectId('Harry Potter')",
+        "ObjectId('Harry Potter 2')"
     ],
-    "Location": "Pondok Indah Mall"
-},
-{
-    "_id": ObjectId("CCCC2"),
-    "cinema_name": "Cinema31",
-    "films": [
-        ObjectId("Harry Potter"),
-        ObjectId("Red Velvet the Movie")
+    "location": "Medan"
+    },
+    {
+    "_id": "ObjectId('VKS')",
+    "cinema_name": "Cinema 31",
+    "film": [
+        "ObjectId('Avenger')",
+        "ObjectId('Spiderman')"
     ],
-    "Location": "Mall Kelapa Gading"
-}
+     "location": "Medan"
+    }
+]
 ```

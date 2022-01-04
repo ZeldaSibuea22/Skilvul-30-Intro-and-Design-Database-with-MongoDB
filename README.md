@@ -14,10 +14,10 @@ One-to-One Relationships
 {
     "_id": ObjectId("612d1e835ebee16872a109a4"),
     "full_name": {
-        "first_name": "Putra",
-        "last_name": "Harianja"
+        "first_name": "Zelda",
+        "last_name": "Sibuea"
     },
-    "email": "putra@mail.com",
+    "email": "zelda@mail.com",
     "phone": "08982823170"
 }
 ```
@@ -36,8 +36,8 @@ One-to-Few/Many Relationships
 {
     "_id": ObjectId("612d1e835ebee16872a109a4"),
     "full_name": {
-        "first_name": "Putra",
-        "last_name": "Harianja"
+        "first_name": "Zelda",
+        "last_name": "Sibuea"
     },
     "phone": "08982823170",
     "addresses": [
@@ -119,8 +119,8 @@ Cinema Schema
     "_id": ObjectId("CCCC1"),
     "cinema_name": "CFG",
     "films": [
-        ObjectId("AAAA1"),
-        ObjectId("AAAA2")
+        ObjectId("Spiderman"),
+        ObjectId("Avenger")
     ],
     "Location": "Pondok Indah Mall"
 },
@@ -128,8 +128,8 @@ Cinema Schema
     "_id": ObjectId("CCCC2"),
     "cinema_name": "Cinema31",
     "films": [
-        ObjectId("AAAA1"),
-        ObjectId("AAAA2")
+        ObjectId("Harry Potter"),
+        ObjectId("Red Velvet the Movie")
     ],
     "Location": "Mall Kelapa Gading"
 }
